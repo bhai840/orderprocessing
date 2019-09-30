@@ -50,7 +50,7 @@ spec:
       - image: docker.io/ewolff/microservice-kubernetes-demo-catalog:latest
         name: catalog
         ports:
-        - containerPort: 8080
+        - containerPort: 8090
         resources: {}
 status: {}
 
@@ -79,7 +79,7 @@ spec:
       - image: docker.io/ewolff/microservice-kubernetes-demo-customer:latest
         name: customer
         ports:
-        - containerPort: 8080
+        - containerPort: 8090
         resources: {}
 status: {}
 
@@ -108,7 +108,7 @@ spec:
       - image: docker.io/ewolff/microservice-kubernetes-demo-order:latest
         name: order
         ports:
-        - containerPort: 8080
+        - containerPort: 8090
         resources: {}
 status: {}
 
@@ -137,7 +137,7 @@ spec:
       - image: docker.io/ewolff/microservice-kubernetes-demo-hystrix-dashboard:latest
         name: hystrix-dashboard
         ports:
-        - containerPort: 8080
+        - containerPort: 8090
         resources: {}
 status: {}
 
@@ -172,9 +172,9 @@ metadata:
   name: catalog
 spec:
   ports:
-  - port: 8080
+  - port: 8090
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8090
   selector:
     run: catalog
   type: LoadBalancer
@@ -192,9 +192,9 @@ metadata:
   name: customer
 spec:
   ports:
-  - port: 8080
+  - port: 8090
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8090
   selector:
     run: customer
   type: LoadBalancer
@@ -212,9 +212,9 @@ metadata:
   name: order
 spec:
   ports:
-  - port: 8080
+  - port: 8090
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8090
   selector:
     run: order
   type: LoadBalancer
@@ -232,9 +232,9 @@ metadata:
   name: hystrix-dashboard
 spec:
   ports:
-  - port: 8080
+  - port: 8090
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8090
   selector:
     run: hystrix-dashboard
   type: LoadBalancer
