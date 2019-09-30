@@ -18,7 +18,7 @@ spec:
         run: apache
     spec:
       containers:
-      - image: docker.io/ewolff/microservice-kubernetes-demo-apache:latest
+      - image: docker.io/rahulnallari/microservice-kubernetes-demo-apache:latest
         name: apache
         ports:
         - containerPort: 80
@@ -47,7 +47,7 @@ spec:
         run: catalog
     spec:
       containers:
-      - image: docker.io/ewolff/microservice-kubernetes-demo-catalog:latest
+      - image: docker.io/rahulnallari/microservice-kubernetes-demo-catalog:latest
         name: catalog
         ports:
         - containerPort: 8090
@@ -76,7 +76,7 @@ spec:
         run: customer
     spec:
       containers:
-      - image: docker.io/ewolff/microservice-kubernetes-demo-customer:latest
+      - image: docker.io/rahulnallari/microservice-kubernetes-demo-customer:latest
         name: customer
         ports:
         - containerPort: 8090
@@ -105,7 +105,7 @@ spec:
         run: order
     spec:
       containers:
-      - image: docker.io/ewolff/microservice-kubernetes-demo-order:latest
+      - image: docker.io/rahulnallari/microservice-kubernetes-demo-order:latest
         name: order
         ports:
         - containerPort: 8090
@@ -134,7 +134,7 @@ spec:
         run: hystrix-dashboard
     spec:
       containers:
-      - image: docker.io/ewolff/microservice-kubernetes-demo-hystrix-dashboard:latest
+      - image: docker.io/rahulnallari/microservice-kubernetes-demo-hystrix-dashboard:latest
         name: hystrix-dashboard
         ports:
         - containerPort: 8090
@@ -157,7 +157,7 @@ spec:
     targetPort: 80
   selector:
     run: apache
-  type: LoadBalancer
+  type: NodePort
 status:
   loadBalancer: {}
 
@@ -177,7 +177,7 @@ spec:
     targetPort: 8090
   selector:
     run: catalog
-  type: LoadBalancer
+  type: NodePort
 status:
   loadBalancer: {}
 
@@ -197,7 +197,7 @@ spec:
     targetPort: 8090
   selector:
     run: customer
-  type: LoadBalancer
+  type: NodePort
 status:
   loadBalancer: {}
 
@@ -217,7 +217,7 @@ spec:
     targetPort: 8090
   selector:
     run: order
-  type: LoadBalancer
+  type: NodePort
 status:
   loadBalancer: {}
 
@@ -237,6 +237,6 @@ spec:
     targetPort: 8090
   selector:
     run: hystrix-dashboard
-  type: LoadBalancer
+  type: NodePort
 status:
   loadBalancer: {}
