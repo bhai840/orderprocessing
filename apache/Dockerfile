@@ -14,5 +14,5 @@ COPY images /var/www/html/images
 COPY css /var/www/html/css
 COPY 000-default.conf  /etc/apache2/sites-enabled/000-default.conf
 
-EXPOSE 80
+EXPOSE 8090
 CMD apache2ctl -D FOREGROUND
